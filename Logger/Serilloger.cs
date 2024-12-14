@@ -26,14 +26,14 @@ namespace ACC01.Logger
             return instance;
         }
 
-        public void Log(string algorithm, string type, long timeInMs, long memoryUsed)
+        public void Log(string algorithm, string type, long averageTimeInMs, long memoryUsed, int repetitions)
         {
             StringBuilder log = new();
             log.AppendLine($"=> {DateTime.Now}");
             log.AppendLine($"Algorithm: {algorithm}");
             log.AppendLine($"Type: {type}");
-            log.AppendLine($"Time: {timeInMs} ms");
-            log.AppendLine($"Memory: {memoryUsed / 1024} KB or {memoryUsed} bits");
+            log.AppendLine($"Average Time: {averageTimeInMs} ms (over {repetitions} repetitions)");
+            log.AppendLine($"Memory Used: {memoryUsed / 1024} KB or {memoryUsed} bits");
 
             File.AppendAllText(logFilePath, log.ToString() + Environment.NewLine);
         }
