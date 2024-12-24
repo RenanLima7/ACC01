@@ -6,7 +6,8 @@ namespace ACC01.Algorithms
     {
         BruteForce = 0,
         DynamicProgramming = 1,
-        DivideAndConquer = 2
+        DivideAndConquer = 2,
+        GreedyAlgorithm = 3
     }
 
     public class AlgorithmFactory
@@ -18,6 +19,7 @@ namespace ACC01.Algorithms
                 AlgorithmType.BruteForce => new BruteForce(),
                 AlgorithmType.DynamicProgramming => new DynamicProgramming(),
                 AlgorithmType.DivideAndConquer => new DivideAndConquer(),
+                AlgorithmType.GreedyAlgorithm => new DivideAndConquer(),
                 _ => throw new ArgumentException("Invalid algorithm type"),
             };
         }

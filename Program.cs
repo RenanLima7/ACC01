@@ -28,7 +28,8 @@ public class Program
         {
             { "BruteForce", AlgorithmFactory.GetAlgorithm(AlgorithmType.BruteForce) },
             { "DivideAndConquer", AlgorithmFactory.GetAlgorithm(AlgorithmType.DivideAndConquer) },
-            { "DynamicProgramming", AlgorithmFactory.GetAlgorithm(AlgorithmType.DynamicProgramming) }
+            { "DynamicProgramming", AlgorithmFactory.GetAlgorithm(AlgorithmType.DynamicProgramming) },
+            { "GreedyAlgorithm", AlgorithmFactory.GetAlgorithm(AlgorithmType.GreedyAlgorithm) }
         };
 
         foreach (var (testCase, description) in testCasesWithDescriptions)
